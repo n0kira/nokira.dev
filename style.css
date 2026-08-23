@@ -1,22 +1,52 @@
-li{
+/* Styling :) */
+
+summary {
+  user-select: none;
+  cursor: pointer;
+  width: fit-content;
+}
+
+dfn {
+  cursor: help;
+}
+
+li:not(.interests-note){
   display: inline;
   white-space: nowrap;
 }
 
-li:before {
+li:not(.interests-note):before {
   content: " 🗲 ";
   margin: 0, 10px;
 }
 
+.personal-info {
+  margin: 12px;
+}
+
+.personal-info * {
+  margin: 0;
+}
+
+.personal-info div {
+  margin: 10px;
+}
+
+.personal-info p {
+  font-size: larger;
+  font-weight: bold;
+}
+
 .container {
-  border: gray 2px solid;
+  border: rgb(0, 0, 0) 4px solid;
+  margin: 10px;
+  border-radius: 6px;
 }
 
 .content-table {
   display: flex;
   margin-left: 15%;
   margin-right: 15%;
-  border: solid red;
 }
 
 .introduction {
@@ -34,24 +64,44 @@ li:before {
 .interests-box {
   display: flex;
   align-items: center;
-  border: gray 2px solid;
+  border-top: rgb(0, 0, 0) 4px solid;
+  padding: 10px;
 }
 
 .interests-box h3 {
-  width: 55%;
+  width: 35%;
 }
 
 .interests-box ul {
   width: 100%;
 }
 
+.interests-note {
+  margin-top: 6px;
+  list-style-type: none;
+}
+
+.general {
+  border: none;
+}
+
 .category-title {
   margin: 0;
-  background-color: rgb(194, 194, 194);
+  background-color: rgb(76, 76, 76);
   text-align: center;
+  border-bottom: rgb(0, 0, 0) 4px solid;
+}
+
+.about-text {
+  padding: 10px;
+}
+
+.introduction {
+  border: none;
 }
 
 #picture {
   height: 192px;
-  border: 2px solid;
+  border: 4px solid;
+  border-radius: 6px;
 }
