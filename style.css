@@ -1,9 +1,20 @@
 /* Styling :) */
 
+body {
+  background-image: url(assets/img/background.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+  font-size: large;
+}
+
 summary {
   user-select: none;
   cursor: pointer;
   width: fit-content;
+  font-size: 25px;
 }
 
 dfn {
@@ -18,6 +29,12 @@ li:not(.interests-note){
 li:not(.interests-note):before {
   content: " 🗲 ";
   margin: 0, 10px;
+}
+
+h1 {
+  margin: 0;
+  margin-top: 10px;
+  padding-left: 12px;
 }
 
 .personal-info {
@@ -44,9 +61,14 @@ li:not(.interests-note):before {
 }
 
 .content-table {
+  background: linear-gradient(135deg, rgba(1, 1, 1, 0.4) 0%, rgba(1, 2, 2, 0.4) 100%);
+  backdrop-filter: blur(10px);
+  border: #2c0e3b 4px solid;
+  border-radius: 8px;
   display: flex;
   margin-left: 15%;
   margin-right: 15%;
+  margin-top: 75px;
 }
 
 .introduction {
@@ -87,7 +109,7 @@ li:not(.interests-note):before {
 
 .category-title {
   margin: 0;
-  background-color: rgb(76, 76, 76);
+  background-color: #271133d3;
   text-align: center;
   border-bottom: rgb(0, 0, 0) 4px solid;
 }
@@ -100,8 +122,88 @@ li:not(.interests-note):before {
   border: none;
 }
 
+.graphics {
+  margin: 24px 0;
+}
+
+.portal-divider {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.portal-divider img {
+  position: relative;
+  z-index: 2;
+}
+
+.divider {
+  width: 100%;
+}
+
+#portal-text {
+  position: absolute;
+  width: 98%;
+  left: 0;
+  z-index: 1;
+}
+
 #picture {
   height: 192px;
-  border: 4px solid;
+  border: rgb(0, 0, 0) 4px solid;
   border-radius: 6px;
+  border-style: solid;
+  border-width: 10px;
+  border-image: url("https://dl.dropbox.com/scl/fi/6wo0voidugxmgg0a81v20/lace-border-png-37013.png?rlkey=3hn4k762e8y0v6d2v6mwrtcbr&st=5o8bpex4") 60 fill round;
+}
+
+/* CUSTOM IMPORTS */
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 15px #640995;
+  }
+
+  50% {
+    text-shadow: none;
+  }
+
+  100% {
+    text-shadow: 0 0 15px #640995;
+  }
+  }
+
+  @-webkit-keyframes glow {
+    0% {
+      text-shadow: 0 0 15px #640995;
+    }
+
+    50% {
+      text-shadow: 0 0 0;
+    }
+
+    100% {
+      text-shadow: 0 0 15px #640995;
+    }
+}
+
+h1 {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000;
+  font-weight:bold;
+  -webkit-animation: glow 2.0s linear infinite;
+  -moz-animation: glow 2.0s linear infinite;
+  -ms-animation: glow 2.0s linear infinite;
+  -o-animation: glow 2.0s linear infinite;
+  animation: glow 2.0s linear infinite;
+}
+
+#portal-text {
+  text-shadow: -1px 0 #fff, 0 1px #000, 1px 0 #000, 0 -1px #fff, 0 0;
+  color: #640995;
+  padding: 0 1px 0 1px;
 }
