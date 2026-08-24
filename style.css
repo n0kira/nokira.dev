@@ -15,11 +15,27 @@ summary {
   cursor: pointer;
   width: fit-content;
   font-size: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
 }
 
 dfn {
   cursor: help;
 }
+
+button {
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+button:active {
+  border: none;
+  transform: scale(95%);
+}
+
 
 li:not(.interests-note){
   display: inline;
@@ -61,13 +77,13 @@ h1 {
 }
 
 .content-table {
-  background: linear-gradient(135deg, rgba(1, 1, 1, 0.4) 0%, rgba(1, 2, 2, 0.4) 100%);
+  background: linear-gradient(135deg, rgba(25, 9, 36, 0.4) 0%, rgba(21, 0, 52, 0.4) 100%);
   backdrop-filter: blur(10px);
-  border: #2c0e3b 4px solid;
+  border: #000 4px solid;
   border-radius: 8px;
   display: flex;
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 20%;
+  margin-right: 20%;
   margin-top: 75px;
 }
 
@@ -91,7 +107,7 @@ h1 {
 }
 
 .interests-box h3 {
-  width: 35%;
+  width: 15%;
 }
 
 .interests-box ul {
@@ -140,7 +156,41 @@ h1 {
 }
 
 .divider {
-  width: 100%;
+  margin-left: -10px;
+  width: calc(100% + 20px);
+}
+
+.blinkies-container {
+  text-align: center;
+}
+
+.blinkies {
+  width: 45%;
+}
+
+.blinkies:last-child {
+  width: calc(90% + 6px);
+}
+
+.stamps {
+  width: 25%;
+}
+
+.stamps-container {
+  text-align: center;
+}
+
+.links-box {
+  display: flex;
+  justify-content: center;
+}
+
+.link-text {
+  margin: 6px;
+}
+
+.link-text:hover {
+  transform: scale(105%);
 }
 
 #portal-text {
@@ -157,6 +207,82 @@ h1 {
   border-style: solid;
   border-width: 10px;
   border-image: url("https://dl.dropbox.com/scl/fi/6wo0voidugxmgg0a81v20/lace-border-png-37013.png?rlkey=3hn4k762e8y0v6d2v6mwrtcbr&st=5o8bpex4") 60 fill round;
+}
+
+/* Responsive Design */
+
+@media (min-width: 2560px) {
+
+  body {
+    backdrop-filter: blur(4px);
+  }
+
+  .content-table {
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-top: 125px;
+  }
+
+  .interests-box h3 {
+    width: 25%;
+  }
+}
+
+@media (max-width: 768px) {
+
+  body {
+    font-size: medium;
+  }
+
+  .content-table {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 25px;
+  }
+
+  .interests-box {
+    display: flex;
+    align-items: center;
+    font-size: smaller;
+  }
+
+  .table-left {
+    width: 100%;
+  }
+
+  .graphics {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .blinkies-container {
+    text-align: center;
+  } 
+  
+  .stamps-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .divider {
+    margin-top: 35px;
+  }
+
+  .blinkies {
+    margin: 6px;
+    width: 100%;
+  }
+
+  .blinkies:last-child {
+    width: 100%;
+  }
+
+  .stamps {
+    width: 100%;
+  }
 }
 
 /* CUSTOM IMPORTS */
@@ -202,8 +328,17 @@ h1 {
   animation: glow 2.0s linear infinite;
 }
 
-#portal-text {
+#portal-text,
+.link-text {
   text-shadow: -1px 0 #fff, 0 1px #000, 1px 0 #000, 0 -1px #fff, 0 0;
   color: #640995;
   padding: 0 1px 0 1px;
+}
+
+.image-mask {
+  -webkit-mask-image: url(https://i.ibb.co/JjDXBPr/ED5929-CE-1-D66-4-EC4-8-F8-A-14792-D8-F2384.png);
+  -webkit-mask-size: 100%;
+  -webkit-mask-repeat: no-repeat;
+  border-radius: 15px;
+  -webkit-mask-position: center;
 }
