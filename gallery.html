@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galley | nokira</title>
+  <title>Gallery | nokira</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <a href="/index.html">Back</a>
-  
+  <a href="/index.html" class="link-text link-gallery">Home</a>
   <div class="content-table">
     <div class="gallery-container">
-
+      
+      <h1 class="gallery-title"><img src="assets/img/emojis/cat.gif" alt="" height="30px"> Nokira's Gallery</h1>
       <div class="gallery-controls">
         <input type="text" id="gallery-search" placeholder="Filter by tag">
       
@@ -23,7 +23,19 @@
         </select>
       </div>
 
-      <div class="gallery"></div>
+      <div class="gallery">
+
+        <!-- <div class="gallery-item">
+          <a href="${photo.src}" target="_blank">
+            <img src="${photo.src}" alt="" class="gallery-picture" decoding="async" loading="lazy">
+          </a>
+          <div class="gallery-details">
+            <div class="gallery-description">${photo.description}</div>
+            <div class="gallery-tags">Tags: ${photo.tags}</div>
+          </div>
+        </div> -->
+
+      </div>
 
     </div>
   </div>

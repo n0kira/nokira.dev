@@ -283,7 +283,7 @@ const photos = [
   },
   {
     src: "assets/img/gallery/IMG-20231212-WA0006.webp",
-    description: "Foggy streat",
+    description: "Foggy street",
     tags: "random",
     date: "2023-12-12"
   },
@@ -296,7 +296,7 @@ const photos = [
   {
     src: "assets/img/gallery/IMG-20250824-WA0000.webp",
     description: "Pink-ish sky",
-    tags: "sky",
+    tags: "random",
     date: "2025-08-24"
   },
   {
@@ -348,10 +348,12 @@ function renderGallery() {
     item.className = "gallery-item";
     item.innerHTML = `
       <a href="${photo.src}" target="_blank">
-        <img src="${photo.src}" alt="" class="gallery-picture" decoding="async" loading="lazy">
+        <img src="${photo.src}" alt="${photo.description}" class="gallery-picture" decoding="async" loading="lazy">
       </a>
-      <div class="gallery-description">${photo.description}</div>
-      <div class="gallery-tags">Tags: ${photo.tags}</div>
+      <div class="gallery-details">
+        <div class="gallery-description">${photo.description}</div>
+        <div class="gallery-tags">Tags: ${photo.tags}</div>
+      </div>
     `;
 
     gallery.appendChild(item);
