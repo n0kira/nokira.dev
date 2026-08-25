@@ -61,7 +61,7 @@ li:not(.interests-note){
 }
 
 li:not(.interests-note):before {
-  content: " 🗲 ";
+  content: ">";
   margin: 0 10px;
 }
 
@@ -411,7 +411,31 @@ nav {
 @media (max-width: 1000px) {
 
   body {
-    font-size: medium;
+    font-size: large;
+  }
+
+  .interests-box {
+    display: flex;
+    align-items: flex-start; 
+    font-size: 11px;
+  }
+
+  .interests-box h3 {
+    width: 25%;
+    flex-shrink: 0;
+  }
+
+  .interests-box ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 75%;
+    padding-left: 10px;
+    margin: 0;
+  }
+  
+  .interests-box li:not(.interests-note) {
+    display: inline-flex;
+    white-space: normal;
   }
 
   .content-table {
@@ -425,7 +449,7 @@ nav {
   .interests-box {
     display: flex;
     align-items: center;
-    font-size: smaller;
+    font-size: large;
   }
 
   .table-left {
@@ -475,6 +499,42 @@ nav {
     margin-right: auto;
   }
 
+}
+
+@media (max-width: 400px) {
+  body {
+    font-size: 14px;
+  }
+
+  .content-table {
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 10px;
+  }
+
+  .interests-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .interests-box h3 {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+
+  .gallery-item {
+    width: 100%;
+    margin: 8px;
+  }
+
+  .gallery-picture {
+    height: 250px;
+  }
+
+  .gallery-title {
+    font-size: 32px;
+  }
 }
 
 /* CUSTOM IMPORTS */
