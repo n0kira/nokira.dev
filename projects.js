@@ -6,14 +6,6 @@ const projects = [
   //   date: ""
   // },
   {
-    src: "assets/img/projects/KittenOS.png",
-    title: "KittenOS",
-    description: "Simple WebOS. It features many apps including: music player, paint app, weather app and much more!",
-    repo: "https://github.com/n0kira/KittenOS",
-    demo: "https://n0kira.github.io/KittenOS/",
-    languages: "HTML, CSS, JS",
-  },
-  {
     src: "assets/img/projects/Hackpad.png",
     title: "Nokira's Hackpad",
     description: "Simple macropad with 6 keys, 1 rotary encoder and an OLED Display. This is an open-case hackpad. You could say it was because I don't know how to build a case... maybe.",
@@ -54,6 +46,14 @@ const projects = [
     languages: "HTML, CSS, JS",
   },
   {
+    src: "assets/img/projects/KittenOS.png",
+    title: "KittenOS",
+    description: "Simple WebOS. It features many apps including: music player, paint app, weather app and much more!",
+    repo: "https://github.com/n0kira/KittenOS",
+    demo: "https://n0kira.github.io/KittenOS/",
+    languages: "HTML, CSS, JS",
+  },
+  {
     src: "assets/img/projects/TheLazyOne.jpg",
     title: "TheLazyOne",
     description: "Slack Bot was made totally with Node.js. It features some basic commands and also some API commands. See them all in the repo",
@@ -74,6 +74,7 @@ const projects = [
 const projectsGallery = document.querySelector(`.projects`);
 
 function renderGallery() {
+  if (!projectsGallery) return;
   projectsGallery.innerHTML = '';
 
   projects.forEach(project => {

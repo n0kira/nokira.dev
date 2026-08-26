@@ -222,6 +222,78 @@ h1 {
   font-size: 50px;
 }
 
+.latest-project.container {
+  overflow: hidden;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.latest-project-item {
+  display: flex;
+  flex-direction: row;
+  max-width: 700px;
+  width: 100%;
+  margin: 15px auto;
+  border: 4px solid #000000;
+  border-radius: 12px;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: transform 0.6s ease-in-out;
+}
+
+.latest-project-item:hover {
+  transform: scale(102%);
+  border: 4px solid #640995;
+}
+
+.latest-project-item:hover .latest-project-picture {
+  border-right: 4px solid #640995;
+}
+
+.latest-project-picture {
+  max-height: 280px;
+  max-width: 200px;
+  width: 100%;
+  border-right: 4px solid #000;
+  object-fit: cover;
+  box-sizing: border-box;
+}
+
+.latest-project-details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 15px 0;
+  box-sizing: border-box;
+}
+
+.latest-project-title {
+  text-align: center;
+  font-size: 32px;
+}
+
+.latest-project-description {
+  font-size: 16px;
+  margin: 10px;
+  text-align: justify;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.latest-project-languages,
+.latest-project-resources {
+  text-align: center;
+  font-size: 14px;
+}
+
+.latest-project-resources a,
+.latest-project-resources a:visited {
+  color: white;
+}
+
 #portal-text {
   position: absolute;
   width: 98%;
@@ -638,6 +710,37 @@ h1 {
     font-size: 16px;
   }
 
+  .latest-project-item {
+    flex-direction: column;
+    width: 92%;
+    margin: 10px auto;
+  }
+
+  .latest-project-picture {
+    max-width: 100%;
+    height: 200px;
+    border-right: none;
+    border-bottom: 4px solid #000;
+  }
+
+  .latest-project-item:hover {
+    border: 4px solid #640995;
+  }
+
+  .latest-project-item:hover .latest-project-picture {
+    border-right: none;
+    border-bottom: 4px solid #640995;
+  }
+
+  .latest-project-title {
+    font-size: 24px;
+  }
+
+  .latest-project-description {
+    font-size: 14px;
+    padding: 0 5px;
+  }
+
 }
 
 @media (max-width: 400px) {
@@ -682,6 +785,20 @@ h1 {
   .projects-details {
     margin: 15px 0;
   }
+
+  .latest-project.container {
+    width: 95%;
+  }
+
+  .latest-project-item {
+    width: 95%;
+    margin: 8px auto;
+  }
+
+  .latest-project-details {
+    margin: 10px 0;
+  }
+
 }
 
 /* 
