@@ -9,25 +9,25 @@
 </head>
 <body>
 
-  <nav>
-    <a href="/index.html" class="link-text link-gallery">Home</a>
-  </nav>
   <div class="content-table">
     <div class="gallery-container">
+      <div class="gallery-links">
+        <a href="/index.html" class="link-text link-gallery">Home</a>
+      </div>
       
       <h1 class="gallery-title"><img src="assets/img/emojis/cat.gif" alt="" height="30px"> Nokira's Gallery</h1>
       <div class="gallery-controls">
         <input type="text" id="gallery-search" placeholder="Filter by tag">
-      
+        
         <select id="gallery-sort">
           <option value="date-desc">Date: Newest to oldest</option>
           <option value="date-asc">Date: Oldest to Newest</option>
           <option value="tag-asc">Tag: A to Z</option>
         </select>
       </div>
-
+      
       <div class="gallery">
-
+        
         <!-- <div class="gallery-item">
           <a href="${photo.src}" target="_blank">
             <img src="${photo.src}" alt="" class="gallery-picture" decoding="async" loading="lazy">
@@ -37,12 +37,15 @@
             <div class="gallery-tags">Tags: ${photo.tags}</div>
           </div>
         </div> -->
-
+        
       </div>
-
+      
+      <div class="gallery-links">
+        <a href="/index.html" class="link-text link-gallery">Home</a>
+      </div>
     </div>
   </div>
-
+  
   <script src="gallery.js"></script>
 </body>
 </html>
