@@ -128,7 +128,7 @@ const photos = [
   {
     src: "assets/img/gallery/1787664281665.webp",
     description: "Old Ferrari's wheel",
-    tags: "car ferrari",
+    tags: "cars ferrari",
     date: "2026-08-11"
   },
   {
@@ -194,7 +194,7 @@ const photos = [
   {
     src: "assets/img/gallery/1787664282427.webp",
     description: "Cool painting in Winchester",
-    tags: "travelling UK random ",
+    tags: "travelling UK random",
     date: "2025-09-13"
   },
   {

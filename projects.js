@@ -73,7 +73,7 @@ const projects = [
 
 const projectsGallery = document.querySelector(`.projects`);
 
-function renderGallery() {
+function renderProjects() {
   if (!projectsGallery) return;
   projectsGallery.innerHTML = '';
 
@@ -101,4 +101,4 @@ function renderGallery() {
 }
 
 
-renderGallery();
+renderProjects();
