@@ -3,6 +3,7 @@
 ![Picture](assets/README-banner.png)
 
 This is my personal website, inspired by MySpace, built with HTML, CSS and JavaScript.
+If you want to see the blog's repo [click here](https://github.com/n0kira/blog.nokira.dev)
 
 ## Components:
 - Home Page:
